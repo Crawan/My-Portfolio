@@ -22,3 +22,15 @@ contact_anchor.addEventListener("click", function show() {
 
     console.log(visibility);
 });
+
+const submitform = document.getElementById("submitmsg") as HTMLButtonElement;
+const email = document.getElementById("email") as HTMLInputElement;
+const msg = document.getElementById("msg") as HTMLTextAreaElement;
+
+
+submitform.addEventListener("click", () => {
+    setTimeout(() => {
+        email.value = ""
+        msg.value = "'"
+    },1)
+})
