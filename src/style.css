@@ -65,6 +65,7 @@
   padding: 0;
   margin: 0;
   color: rgb(255, 255, 255);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -178,17 +179,17 @@ main .about p {
   height: fit-content;
   max-height: 40vh;
   padding: 3rem;
-  border-radius: 50px;
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  text-align: left;
 }
 
 #profile {
   display: flex;
+  flex-direction: column;
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
   height: 60.188rem;
   gap: 4rem;
+  text-align: center;
 }
 
 #profile .profile{
@@ -198,10 +199,19 @@ main .about p {
   gap: 4rem;
 }
 
-.profile img {
-  margin-top: 12vh;
-  height: 50vh;
+.container img {
+  height: 90%;
   width: fit-content;
+  float: right;
+  padding-right: 5%;
+  padding-top: 1.5rem;
+}
+
+.container {
+  height: fit-content;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 /* ---------- ABOUT ME ----------- */
@@ -210,7 +220,6 @@ main .about p {
   flex-direction: column;
   align-content: center;
   height: 60.188rem;
-  margin-top: 320px;
 }
 
 /* ========== CERTIFICATE ========== */
@@ -308,6 +317,7 @@ main #skills .skillset .skill-card {
   gap: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  align-items: center;
 }
 
 main #skills .skillset .skill-card img{
@@ -316,7 +326,6 @@ main #skills .skillset .skill-card img{
   justify-content: center;
   text-align: center;
   align-content: center;
-  padding-left: 40px;
 }
 
 main #skills .skillset .skill-card h2{
@@ -485,4 +494,220 @@ button:hover {
 
 footer {  
   text-align: center;
+}
+
+/* ========== RESPONSIVE: TABLET & PHONE ========== */
+/* Tablet: 768px — 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .judul {
+    font-size: 3rem;
+    height: auto;
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 5rem;
+  }
+
+  nav {
+    margin-top: 4vh;
+    font-size: 1rem;
+  }
+
+  nav .nav {
+    gap: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  main .about p {
+  font-family: "Poppins";
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+main .about p {
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container img {
+  height: 90%;
+  width: fit-content;
+  float: right;
+  padding-right: 5%;
+  padding-top: 1.5rem;
+}
+
+.container {
+  padding-bottom: 2rem;
+}
+
+  main #skills .skillset .skill-card {
+    width: 7.5rem;
+    height: 8rem;
+  }
+
+  main #skills .skillset .skill-card img{
+  height: 3.75rem;
+  width: 3.75rem;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  object-position:center;
+}
+
+  main #portfolio .project {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main #portfolio .project .project-showcase .desktop-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #contact {
+    padding-left: 2rem;
+    position: fixed;
+    height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .form-container {
+    width: 420px;
+    margin: 0 auto;
+  }
+}
+
+/* Phone: up to 767px */
+@media (max-width: 767px) {
+  header .judul {
+    font-size: 2rem;
+    height: auto;
+    padding: 6rem 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  nav {
+    margin-top: 2vh;
+    font-size: 0.95rem;
+  }
+
+  nav .nav {
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+  }
+
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+    gap: 1.5rem;
+  }
+
+  .container img {
+  height: fit-content;
+  width: 20%;
+  float: right;
+  padding-right: 5%;
+  margin-top: 10%;
+}
+
+main .about p {
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+main .about h1 {
+  font-size: 1.2rem;
+}
+
+  main #certificate .certificates {
+    gap: 1rem;
+    margin-top: 4rem;
+  }
+
+  main #skills .skillset {
+    gap: 1rem;
+  }
+
+  main #skills .skillset .skill-card {
+    width: 6.5rem;
+    height: 7rem;
+    padding: 0.75rem; 
+  }
+
+  main #skills .skillset .skill-card img{
+  height: 3.75rem;
+  width: 3.75rem;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  object-position:center;
+}
+
+  main #portfolio .project {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  main #portfolio .project .project-showcase {
+    padding: 0.75rem;
+    border-radius: 16px;
+  }
+
+  main #portfolio .project .project-showcase .project-preview {
+    flex-direction: column;
+  }
+
+  main #portfolio .project .project-showcase .project-preview .mobile-preview img,
+  main #portfolio .project .project-showcase .project-preview .desktop-preview img {
+    width: 100%;
+    height: auto;
+  }
+
+  #contact {
+    padding-left: 0;
+    position: fixed;
+    height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  .form-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
 }
