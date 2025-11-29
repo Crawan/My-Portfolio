@@ -499,10 +499,28 @@ footer {
 /* ========== RESPONSIVE: TABLET & PHONE ========== */
 /* Tablet: 768px — 1024px */
 @media (min-width: 768px) and (max-width: 1024px) {
+
+  main #skills {
+    margin-bottom: 0px;
+    padding-bottom: 20vh;
+    height: fit-content;
+  }
+
+  main #certificate {
+    padding-bottom: 20vh;
+    height: fit-content;
+  }
+
+  main #portfolio {
+    padding-bottom: 20vh;
+    height: fit-content;
+  }
+
   header .judul {
     font-size: 3rem;
-    height: auto;
+    height: 100vh;
     padding: 4rem 1rem;
+    align-items: center;
   }
 
   .title {
@@ -527,10 +545,9 @@ footer {
 
   #profile {
     flex-direction: column;
-    height: auto;
+    height: fit-content;
     gap: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 20vh;
   }
 
   main .about p {
@@ -555,6 +572,12 @@ main .about p {
 
 .container {
   padding-bottom: 2rem;
+  min-height: fit-content;
+}
+
+#profile .about {
+  height: fit-content;
+  max-height: none;
 }
 
   main #skills .skillset .skill-card {
@@ -600,9 +623,10 @@ main .about p {
 @media (max-width: 767px) {
   header .judul {
     font-size: 2rem;
-    height: auto;
+    height: 100vh;
     padding: 6rem 1rem;
     text-align: center;
+    align-items: center;
   }
 
   .title {
@@ -624,11 +648,27 @@ main .about p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  
+  main #skills {
+    margin-bottom: 0px;
+    padding-bottom: 20vh;
+    height: fit-content;
+  }
+
+  main #certificate {
+    padding-bottom: 20vh;
+  }
+
+  main #portfolio {
+    padding-bottom: 20vh;
+  }
+
 
   #profile {
     flex-direction: column;
     height: auto;
-    padding: 2rem 0;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
     gap: 1.5rem;
   }
 
@@ -637,17 +677,17 @@ main .about p {
   width: 20%;
   float: right;
   padding-right: 5%;
-  margin-top: 10%;
+  margin-top: 10vh;
 }
 
 main .about p {
   font-family: "Poppins";
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   font-weight: 400;
 }
 
 main .about h1 {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
 }
 
   main #certificate .certificates {
@@ -673,6 +713,12 @@ main .about h1 {
   align-content: center;
   object-position:center;
 }
+  main #portfolio .project-list {
+    margin-top: 20vh;
+  }
+  main #portfolio .project-list .project .portfolio-title{
+    padding-top: 0px;
+  }
 
   main #portfolio .project {
     flex-direction: column;
