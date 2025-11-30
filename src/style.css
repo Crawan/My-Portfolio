@@ -78,7 +78,7 @@ body {
   background-image: url("/assets/images/asta.svg");
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @font-face {
@@ -638,10 +638,6 @@ main .about p {
 
 header .judul h1 span {
   animation-name: none;
-  animation-duration: none;
-  animation-delay: none;
-  animation-iteration-count: none;
-  animation-fill-mode: none;
   color: red;
 }
 
