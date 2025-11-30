@@ -66,17 +66,19 @@
   margin: 0;
   color: rgb(255, 255, 255);
   scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
 }
 
 body {
   overflow-x: hidden;
-  &::-webkit-scrollbar {
-    display: none;
-  }
   overflow-y: scroll;
   background-image: url("/assets/images/asta.svg");
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 @font-face {
@@ -141,7 +143,6 @@ nav .nav a {
 
 /* ========== CONTENTS =========== */
 main {
-  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   padding-left: 6.25rem;
@@ -149,6 +150,7 @@ main {
   visibility: visible;
   height: fit-content;
   overflow-x: hidden;
+
 }
 
 .blank {
@@ -634,6 +636,15 @@ main .about p {
     align-items: center;
   }
 
+header .judul h1 span {
+  animation-name: none;
+  animation-duration: none;
+  animation-delay: none;
+  animation-iteration-count: none;
+  animation-fill-mode: none;
+  color: red;
+}
+
   .title {
     font-size: 3.5rem;
   }
@@ -650,7 +661,7 @@ main .about p {
   }
 
   main {
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 1rem;
   }
   
@@ -683,7 +694,7 @@ main .about p {
   float: right;
   padding-right: 5%;
   margin-top: 10vh;
-}
+  }
 
 main .about p {
   font-family: "Poppins";
