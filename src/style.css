@@ -605,6 +605,11 @@ main .about p {
     object-fit: cover;
   }
 
+  .project-showcase {
+   width: fit-content;
+    
+  }
+
   #contact {
     padding-left: 2rem;
     position: fixed;
